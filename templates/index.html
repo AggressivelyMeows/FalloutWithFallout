@@ -1,0 +1,486 @@
+<head>
+    <title>Fallout with Fallout?</title>
+    <meta property="og:title" content="Fallout with Fallout?">
+    <meta property="og:url" content="https://falloutwithfallout.com">
+    <meta property="og:description" content="This site makes it easier to follow the Initial Dispute Resolution procedure in the the Zenimax Terms of Service. You can fill and print the form/letter that ZeniMax requires to start their dispute resolution process. "> 
+    <meta property="og:image" content="https://cerulean.nyc3.cdn.digitaloceanspaces.com/FWF/Fallout_76_favicon.png">
+    <meta property='twitter:card' content='summary' />
+    <meta property='twitter:site' content='https://falloutwithfallout.com' />
+    <meta property='twitter:title' content='Fallout With Fallout?' />
+    <meta property='theme-color' content='#0073ce'/>
+    <link href='https://cerulean.nyc3.cdn.digitaloceanspaces.com/FWF/Fallout_76_favicon_small.png' rel='icon'/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">    
+    <style>
+        @font-face {
+            font-family: "europa";
+            src: url("https://use.typekit.net/af/3e64fb/00000000000000003b9b12fe/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("woff2"), url("https://use.typekit.net/af/3e64fb/00000000000000003b9b12fe/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("woff"), url("https://use.typekit.net/af/3e64fb/00000000000000003b9b12fe/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("opentype");
+            font-style: normal;
+            font-weight: 300;
+        }
+        @font-face {
+            font-family: "eurostile";
+            src: url("https://use.typekit.net/af/986195/00000000000000000001799f/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n8&v=3") format("woff2"), url("https://use.typekit.net/af/986195/00000000000000000001799f/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n8&v=3") format("woff"), url("https://use.typekit.net/af/986195/00000000000000000001799f/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n8&v=3") format("opentype");
+            font-style: normal;
+            font-weight: 800;
+        }
+        * {
+            font-family:europa!important;
+        }
+		body {
+			background-image: linear-gradient(to top, #e7f0fd 0%, #accbee 100%);
+			
+		}
+        .title {
+            font-family: eurostile!important;
+        }
+        i {
+            font-family: "Font Awesome 5 Free"!important;
+            font-style: normal;
+        }
+        .is-primary {
+            background:#0073ce!important;
+        }
+        .has-content-centered {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-flow: column;
+        }
+
+        .is-fullwidth-c {
+            width:100%;
+        }
+        .app-page, #dispute-form {
+            margin: 2em;
+            border-top: 6px solid #0073ce;
+        }
+        .fade-enter-active, .fade-leave-active {
+        transition: opacity .5s;
+        }
+        .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+        opacity: 0;
+        }
+		
+        #dispute-form {
+            width: 100%;
+            word-wrap: break-word;
+                    
+        }
+
+		.error-notice {
+			visibility: visible;
+			font-style: bold;
+			padding-left: 4px;
+			border: #c00;
+			font-weight: bold;
+			border-style: double;
+		}
+		
+		.error-notice h2 {
+				text-align: left;
+				font-weight: bold;
+				padding: 5px 5px 5px 15px;
+				font-size: x-large;
+				background-color: #c00;
+				color: #fff;
+				margin: 5px 5px 5px 0px;
+			  }
+			  
+		.error-notice ul li {
+				list-style: disc;
+				margin: 5px 5px 5px 24px;
+			  }
+
+        @media only screen and (min-width: 850px) {
+            .app-page {
+                width:750px
+            }
+        }
+        @media print {
+            * {
+                font-size:12pt!important;
+            }
+            p {
+                position: static;
+            }
+            iframe {
+                display: none!important;
+            }
+
+            #instructions {
+                display: none;
+            }
+
+            .box {
+                background-color: #fff;
+                border-radius: 0px;
+                box-shadow: none;
+                color: #000000;
+                display: block;
+                padding: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    {% raw %}
+    <div id='app'>
+        
+        <div class="app has-content-centered container" v-if='stage === 1'>
+            <div class="box has-content-centered app-page">
+                <h1 class="title is-3">Fallout With Fallout?</h1>
+                <div class="is-fullwidth-c">
+                    <hr style="margin-top:0;"/>
+                    <div class="columns">
+                        <div class="column">
+                            <div class="content has-content-centered" style="font-size:0.97em">
+                                <iframe style="width:85%;height: 340px" src="https://www.youtube-nocookie.com/embed/aDb7z8SytRc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                <div>
+                                    <hr />
+                                    <p>
+										This site makes it easier to follow the <b>Initial Dispute Resolution procedure</b> in the the <a href="https://bethesda.net/en/document/terms-of-service" target="_blank">Zenimax Terms of Service</a>. You can fill and print the form/letter that ZeniMax requires to start their dispute resolution process.
+										</p><p>
+										ZeniMax's Terms of Service contain other relevant procedures for dispute resolution through Arbitration. <b>You should read the relevant sections of the Terms of Service</b> before attempting to initiate your dispute using this form.
+										</p><hr><p>
+										WHY IS THERE NO ADVICE ON WHAT CLAIMS TO MAKE OR WHAT REMEDY TO ASK FOR?
+										<br><br>
+										This site is not for giving legal advice. You should only use this site if you already know what you want the form to say - and just want the convenience of filling the form and/or having us mail it for you.
+										</p><hr><p>
+										SELF-SERVICE PRINTING &amp; MAILING:
+										<br><br>
+										<u>Step 1</u>: Fill out the form below with your dispute. We recommend writing your dispute in your own word processor and copy/pasting the text into the form. On submission, you'll receive a page with your filled form ready for saving and printing. We recommend <b>saving your form to PDF</b> and <b>printing your form</b> before mailing, even if we mail it for you. Keep copies for yourself as we do not store your information at this stage!
+										<br><br>
+										<u>Step 2</u>: Mail your form to the address listed in the Zenimax Terms of Service. 
+										</p><hr><p>
+										FULL-SERVICE PRINTING &amp; MAILING: 
+										<br><br> 
+										<u>Step 3 (optional)</u>: You'll be presented with the option to have us print and mail your form for you for a small fee. We supply the, er, supplies, we do the legwork. You just fill out the form and give us some money for our time and expense.  
+										<ol>
+										<li>We will print and mail your dispute to the address provided in the ZeniMax Terms of Service.</li>
+										<li>First-Class Postal Service mail: $3.00 (limit approx. 4 pages, 15,000 characters).</li>
+										<li>(Coming soon) Priority Mail with Tracking: $10.00 (limit approx. 30 pages).</li>
+										<li>Your submission will be stored securely in a Google Spreadsheet behind a Two-Factor-Authenticated account.</li>
+										<li>You'll receive email confirmation of the date your letter was mailed. Your letter will be mailed as soon as practically possible. Our target is the next business day, but it could be slightly longer as we wait for supplies (toner, envelopes, etc.)</li>
+										<li><u>Note</u>: There is currently a limit of <b>four pages</b> total for the final printed mailing. If your dispute is longer than this and you'd like us to mail it, please <a href="https://leonardjfrench.com/contact/" target="_blank">Contact Us</a> and let us know. We are considering implementing higher page counts and Priority Mail. We currently have this limit in place so we are not overwhelmed with mailing issues. We will grow with your demand! Thank you for your understanding!</li>
+										</ol>
+										</p><hr><p>
+										IMPORTANT TERMS: 
+										<ol>
+										<li>By using this site, you agree that you are seeking our services for help with filling, saving, printing, and/or mailing, a form, and no legal advice is given or representation created.</li>
+										<li>This site is not affiliated with Bethesda or ZeniMax in any way.</li>
+										<li>There is no charge for using this service to create, save, and print your form(s).</li>
+										<li>Hiring us to mail your form is not required and doesn't increase or decrease the merit or treatment of your dispute.</li>
+										<li>Although I am an attorney, I am not your attorney and this is not legal advice. Using this site does not create any attorney-client relationship.</li>
+										<li>We do not read your dispute other than to match your name and address to the correct envelope.</li>
+										<li>We do not and cannot track the status of your dispute with Zenimax/Bethesda.</li>
+										<li>Filling out this form is not a guarantee of resolution.</li>
+										<li>Having us mail your form is not a guarantee that ZeniMax receives it or acts on it. This site is simply a way to make the first step easy and convenient.</li>
+										<li>This site cannot fully inform you on everything you need to know about your rights and risks; you should hire an attorney if you do not fully understand your rights or the risks involved with starting and/or maintaining a dispute.</li>
+										</ol>
+										</p><hr><p>
+										DATA SECURITY: This site (falloutwithfallout.com) stores no data. Visitors who pay for us to mail their form have their data stored in a Google Sheet behind an account secured with Two-Factor-Authentication.
+										</p><p>
+										FEEDBACK: We welcome feedback! To keep this site lightweight, please contact us through my Firm's <a href="https://leonardjfrench.com/contact/" target="_blank">Contact page</a>. Please note that contacting me does not automatically create any attorney-client relationship.
+										</p><p>
+										FOR YOUR INFORMATION: The <a href="https://bethesda.net/en/document/terms-of-service" target="_blank">Bethesda/Zenimax Terms of Service</a> are linked below. The Intial Dispute Resolution procedure and location paragraphs are from Section 15:
+										</p>
+										
+                                    </div>
+                                <code>
+                                    <b>Pre-Arbitration Claim Resolution.</b> For all Disputes, whether pursued in court or arbitration, You must first give ZeniMax an opportunity to resolve the Dispute. You must commence this process by mailing written notification to ZeniMax Media Inc., Attn: Legal Dep't, 1370 Piccard Drive, Rockville, MD 20850 USA. That written notification must include (1) Your name, (2) Your address, (3) a written description of Your Dispute, and (4) a description of the specific relief You seek. If ZeniMax does not resolve the Dispute to your satisfaction within forty-five (45) days after receipt of Your written notification, You may pursue Your Dispute in arbitration. You may pursue Your Dispute in a court only under the circumstances described below.<br><br>
+									<b>If You reside in the EEA/Switzerland/Japan/Australia/New Zealand/Brazil,</b> then only this first paragraph of [] Section 15 will apply to You. ZeniMax will try and solve any disagreements that arise between You and ZeniMax promptly and efficiently. You and ZeniMax may agree to refer any disputed matter to resolution proceedings other than in a court but You and ZeniMax are not restricted from bringing court proceedings at any time.<br><br>
+									<b>If You reside outside the EEA/Switzerland/Japan/Australia/New Zealand/Brazil,</b> then the terms below in this Section 15 apply to You.
+                                </code>
+                                <a href="https://bethesda.net/en/document/terms-of-service" target="_blank">Click here for the Zenimax/Bethesda Terms of Service</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="error-notice" v-if='errors.length'>
+                        <h2>The following error(s) prevented the form from being submitted:</h2>
+                        <ul>
+                            <li v-for='error in errors'>{{error}}</li>
+                        </ul>
+                    </div>
+                    <hr />
+                    <div class="field">
+                        <label class="label">Contact Email</label>
+                        <div class="control">
+                            <input name="email" class="input" type="text" placeholder="Contact email" v-model='user.email'>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label class="label">(1) Your Name</label>
+                        <div class="control">
+                            <input name="name" class="input" type="text" placeholder="(1) Your Name" name='full_name' v-model='user.full_name'>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <div class="control">
+                            <label class="label">(2) Your address <em>(your complete return address, including city, state, and postal code)</em></label>
+                            <textarea class="textarea" placeholder="(2) Your address" v-model='user.address' rows='2' name='street-address'></textarea>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <div class="control">
+                            <label class="label">(3) a written description of Your Dispute, and</label>
+                            <textarea class="textarea" placeholder="(3) a written description of Your Dispute" v-model='user.description' name='dispute' rows='3'></textarea>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <div class="control">
+                            <label class="label">(4) a description of the specific relief You seek</label>
+                            <textarea class="textarea" placeholder="(4) a description of the specific relief You seek" v-model='user.relief' name='relief' rows='3'></textarea>
+                        </div>
+                    </div>
+                    <span>{{page_status.amount}}</span>
+                        
+                    <div class="buttons">
+                        <!-- <button class="button is-fullwidth" @click='self_print()'> -->
+                            <!-- Submit -->
+                        <!-- </button> -->
+                        <button class="button is-primary is-fullwidth" @click='pay_us()'>
+                            Submit
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <br />
+        </div>
+        <div class="app has-content-centered container" v-if='stage === 25'>
+            <div class="notification is-danger" v-if='errors.length'>
+                <ul>
+                    <li v-for='error in errors'>{{error}}</li>
+                </ul>
+            </div>
+
+            <div class="box" style="margin-top:1em" id="instructions">
+                <p><a @click='stage=1'>Go back</a></p>
+				<p><hr></p>
+                <h1 class="title">Print &amp; Mail it yourself or Pay us to send it for you</h1>
+                <p>We can print and send your form to ZeniMax without the hassle of sorting it out yourself.</p><br>
+                <p>We charge a very reasonable fee of $3 to cover printing, mailing, and handling expenses. As you've provided your address, any responses will be sent straight back to you.</p><br>
+				<p><u>Note</u>: There is currently a limit of <b>four pages</b> total for the final printed mailing. If your dispute is longer than this and you'd like us to mail it, please <a href="https://leonardjfrench.com/contact/" target="_blank">Contact Us</a> and let us know. We are considering implementing higher page counts but have this limit in place so we are not overwhelmed with mailing issues. Thank you for your understanding!</p><br>
+                <p v-if='page_status.actual_used[1] <= 4'>All you need to do now is click below and it will be all set! <a @click='stage=1'>Or click here to Go Back and edit your submission.</a><br></p>
+                <div id='paypal-button' v-if='page_status.actual_used[1] <= 4'></div>
+                <span>{{page_status.amount}}</span> <span  v-if='page_status.actual_used[1] > 4'>We cannot print this many pages at this time. <a @click='stage=1'>You can Go Back and edit your submission</a>  or print, save, and mail from here.</span>
+                <!-- <a @click='stage=2'>If you wish to print it yourself, click here</a> -->
+				<p><br>Otherwise, simply <b>print the form below and mail it to the address provided</b> by the ZeniMax Terms of Service.</p>
+            </div>
+            <div class="box" style="margin:1em;" id="dispute-form">
+                <div id='generated_dispute' class="content print">
+                    <b>Pre-Arbitration Claim Resolution Form <br />
+                    <br />
+                    To: <br />
+                    ZeniMax Media Inc.<br />
+                    Attn: Legal Dep't<br />
+                    1370 Piccard Drive<br />
+                    Rockville, MD 20850<br />
+                    USA<br />
+                    <br /> <br />
+                    "ZENIMAX MEDIA TERMS OF SERVICE" <br />
+                    "15....... Dispute Resolution, Arbitration and Class Action Waiver" <br />
+                    "For all Disputes, whether pursued in court or arbitration, You must first give ZeniMax an opportunity to resolve the Dispute. You must commence this process by mailing written notification to ZeniMax Media Inc., Attn: Legal Dep't, 1370 Piccard Drive, Rockville, MD 20850 USA. That written notification must include (1) Your name, (2) Your address, (3) a written description of Your Dispute, and (4) a description of the specific relief You seek. If ZeniMax does not resolve the Dispute to your satisfaction within forty-five (45) days after receipt of Your written notification, You may pursue Your Dispute in arbitration. You may pursue Your Dispute in a court only under the circumstances described below." </b><br /> <br />
+                    <br />
+                    <b>(1) Your name,</b> <br />
+                    <p>{{user.full_name}}</p> <br />
+                    <b>(2) Your address,</b>  <br />
+                    <p v-html='parse_input(user.address)'></p> <br /> 
+                    <b>(3) a written description of Your Dispute, and</b>
+                    <p v-html='parse_input(user.description)'> </p><br />
+                    <b>(4) a description of the specific relief You seek</b>
+                    <p v-html='parse_input(user.relief)'> </p>
+                </div>
+            </div>
+        </div>
+        <div class="app has-content-centered container" v-if='stage === 3'>
+            <div class="box" style="margin-top:1em" id="instructions">
+                <p><a @click='reset()'>Go Back and Start Again</a></p>
+                <p><hr></p>
+                <h1 class="title">Full Service Mailing Order Confirmed!</h1>
+                <p>Thanks for asking us to print and send your form to ZeniMax without the hassle of sorting it out yourself!</p><br>
+                <p>Your form is still below in case you'd like to save or print it for your records.</p><br>
+				<p>We'll mail your letter out as soon as possible, usually the next business day. As you've provided your address, any responses will be sent straight back to you.</p><br>
+                <p>You should receive a confirmation email as well.</p><br>
+                <p>Thank you! <a href="https://leonardjfrench.com/contact/" target="_blank">Please send any feedback through this contact page.</a></p>
+            </div>
+            <div class="box" style="margin:1em;" id="dispute-form">
+                <div id='generated_dispute' class="content print">
+                    <b>Pre-Arbitration Claim Resolution Form <br />
+                    <br />
+                    To: <br />
+                    ZeniMax Media Inc.<br />
+                    Attn: Legal Dep't<br />
+                    1370 Piccard Drive<br />
+                    Rockville, MD 20850<br />
+                    USA<br />
+                    <br /> <br />
+                    "ZENIMAX MEDIA TERMS OF SERVICE" <br />
+                    "15....... Dispute Resolution, Arbitration and Class Action Waiver" <br />
+                    "For all Disputes, whether pursued in court or arbitration, You must first give ZeniMax an opportunity to resolve the Dispute. You must commence this process by mailing written notification to ZeniMax Media Inc., Attn: Legal Dep't, 1370 Piccard Drive, Rockville, MD 20850 USA. That written notification must include (1) Your name, (2) Your address, (3) a written description of Your Dispute, and (4) a description of the specific relief You seek. If ZeniMax does not resolve the Dispute to your satisfaction within forty-five (45) days after receipt of Your written notification, You may pursue Your Dispute in arbitration. You may pursue Your Dispute in a court only under the circumstances described below." </b><br /> <br />
+                    <br />
+                    <b>(1) Your name,</b> <br />
+                    <span>{{user.full_name}}</span> <br /> <br />
+                    <b>(2) Your address,</b>  <br />
+                    <span v-html='parse_input(user.address)'></span> <br /> <br />
+                    <b>(3) a written description of Your Dispute, and</b><br />
+                    <span v-html='parse_input(user.description)'> </span><br /><br />
+                    <b>(4) a description of the specific relief You seek</b><br />
+                    <span v-html='parse_input(user.relief)'> </span><br /><br />
+                </div>
+            </div>
+        </div>        
+    </div>
+    {% endraw %}
+</body>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script src="https://www.paypalobjects.com/api/checkout.js"></script>
+<script>
+    String.prototype.replaceAll = function(search, replacement) {
+        var target = this;
+        return target.replace(new RegExp(search, 'g'), replacement);
+    };
+    var app = new Vue({
+        el: '#app',
+        data: {
+            stage: 1,
+            user: {},
+            page_status: {
+                actual_used: [0]
+            },
+            errors: []
+        },
+        methods: {
+            check_page_count() {
+                return new Promise((res, rej) => {
+                    data = {
+                        'user': this.user
+                    }
+                    axios.post('/api/verify_input', data).then((resp) => {
+                        this.page_status = resp['data']
+                        res()
+                    })
+                })
+
+            },
+            parse_input(input) {
+                return input.replaceAll(/(\r\n|\n)/g,  "<br/>");
+            },
+            reset() {
+                this.user = {};
+                this.errors = [];
+                this.stage = 1;
+            },
+            self_print() {
+                if (this.verify_form()) {
+                    this.stage = 2
+                } else {
+                    console.log('Error: Form was not filled in fully.')
+                }
+            },
+            pay_us() {
+                if (this.verify_form()) {
+                    this.stage=25;
+                    window.scrollTo(0, 0);
+                    Vue.nextTick().then(() => {this.check_page_count().then(() => this.render_paypal())})
+                } else {
+                    console.log('Error: Form was not filled in fully.')
+                }
+            },
+            verify_form() {
+                // verify the form stuff
+                var needed_values = ['full_name', 'email', 'description', 'relief'];
+                var errors = []
+                for (var i in needed_values) {
+                    var current_field = needed_values[i];
+                    if (!(needed_values[i] in this.user)) {
+                        errors.push(`${needed_values[i]} is missing`);
+                    } else {
+                      try {
+                          var _ = this.user[current_field]
+                      } catch(e) {
+                        errors.push(`${needed_values[i]} is missing`); 
+                      }
+                    }
+
+                    if (current_field == 'email' && 'email' in this.user) {
+                        // here, and so on
+                        var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+                        var test_case = this.user[current_field].toLowerCase().match(re);
+						if (!(test_case)) {
+							errors.push(`email is invalid`);
+						}
+                    }
+                    
+                }
+				
+                if (errors.length) {
+                    this.errors = errors
+                    return
+                }
+                // fields are all present, set the stage to 2
+                this.errors = [];
+                return true;
+
+            },
+            render_paypal() {
+                var _app = this;
+                paypal.Button.render({
+                    env: 'production', // Optional: specify 'sandbox' environment
+                    client: {
+                        production: 'AQFPp7J-4XTp0MEDmkN6cKV2y4uWuqdFHg0R2XivUwJB_DmFVhCg9aH1eOb6P5OMCPZrsIsKL9sEGGgn'
+                    },
+                    style: {
+                        color: 'silver',   // 'gold, 'blue', 'silver', 'black'
+                        size:  'medium', // 'medium', 'small', 'large', 'responsive'
+                        shape: 'rect'    // 'rect', 'pill'
+                    },
+                    payment: function() {
+                        var env    = this.props.env;
+                        var client = this.props.client;
+                        return paypal.rest.payment.create(env, client, {
+                            transactions: [
+                                {
+                                    amount: { total: '3.00', currency: 'USD' }
+                                }
+                            ]
+                        });
+                    },
+                    commit: true, // Optional: show a 'Pay Now' button in the checkout flow
+                    onAuthorize: function(data, actions) {
+                        // Optional: display a confirmation page here
+                        __data = {
+                            user: _app.user,
+                            payment: data
+                        }
+                        axios.post('/api/new_request', __data).then((response) => {
+                            var resp = response.data;
+                            if (resp.success) {
+                                _app.stage = 3;
+                            } else {
+                                _app.errors.push(resp.error)
+                            }
+                        });
+                    }
+                }, '#paypal-button');
+            }
+        }, 
+        mounted() {
+            console.log('Ready for your mail!')
+        }
+    })
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-6485357-19"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-6485357-19');
+</script>
